@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather</title>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h1>
+            <span> ReWeather </span>
+          </h1>
+          <br />
+          <div class="row city-​​search">
+            <form class="city" id="city">
+                  <input type="text" placeholder="Enter a city" autocomplete="off" id="search-text-input">
+                <input type="submit" value="Search" class="btn
+              btn-outline-primary">
+              <input type="button" value="Current" class="btn
+              btn-outline-info" id="currentCity">
+            </form>
+          </div>
+          <div class="entered-city">
+            <h2></h2>
+          </div>
+          <div class="day-weather">
+            <p class="current-date" id="current-date">
+            </p>
+            <p class="description" id="description">
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-6 main-weather">
+              <img
+                    src="images/sunny.gif"
+                    class="weather-icon"
+                  />
+                  <span class="temperature celsius" id="temperature"></span>
+                  <span class="units"> 
+                    <a href="#" id = "celsius-link">°C</a> | 
+                    <a href="#" id = "fahrenheit-link">°F</a>
+                  </span>
+              </div>
+      
+            <div class="col-6">
+              <div class="others">
+                <p>
+                  Real feel: <span id="real-feel-temperature" class="celsius"></span>
+                  <span class="feel-units" > 
+                    <a href="#" id = "real-feel-celsius-link"> °C </a>| 
+                    <a href="#" id = "real-feel-fahrenheit-link">°F</a></span>
+                  <br />
+                  Humidity: <span id="humidity"></span>%
+                  <br />
+                  Wind: <span id="wind"></span> km/h
+                </p>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="forecast-day">Thu</div>
+              <div class="forecast-icon">
+                <img src="images/sunny.gif" />
+              </div>
+              <div class="forecast-temperature">34°/22°</div>
+            </div>
+            <div class="col">
+              <div class="forecast-day">Fri</div>
+              <div class="forecast-icon">
+                <img src="images/sunny.gif" />
+              </div>
+              <div class="forecast-temperature">32°/22°</div>
+            </div>
+            <div class="col">
+              <div class="forecast-day">Sat</div>
+              <div class="forecast-icon">
+                <img src="images/sunny.gif" />
+              </div>
+              <div class="forecast-temperature">33°/23°</div>
+            </div>
+            <div class="col">
+              <div class="forecast-day">Sun</div>
+              <div class="forecast-icon">
+                <img src="images/sunny.gif" />
+              </div>
+              <div class="forecast-temperature">33°/23°</div>
+            </div>
+            <div class="col">
+              <div class="forecast-day">Mon</div>
+              <div class="forecast-icon">
+                <img src="images/sunny.gif" />
+              </div>
+              <div class="forecast-temperature">33°/23°</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

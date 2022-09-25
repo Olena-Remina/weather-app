@@ -1,0 +1,85 @@
+body {
+  font-family: sans-serif;
+}
+h1 {
+  color: #0988f0;
+  text-align: left;
+  font-size: 25px;
+  margin: 0;
+}
+h1 span {
+  background-color: #f4f88f;
+  padding: 6px;
+  border-radius: 7px;
+}
+.card {
+  text-align: center;
+  margin: 20px auto;
+  width: 400px;
+}
+.city-​​search {
+  text-align: left;
+  margin: 0 0 10px;
+}
+.city {
+  padding: 0;
+}
+.entered-city {
+  text-align: left;
+  padding: 0;
+  font-size: 30px;
+}
+.day-weather {
+  font-size: 16px;
+  text-align: left;
+  padding: 0;
+}
+.current-date {
+  display: block;
+  margin-bottom: 0;
+}
+.description {
+  text-transform: capitalize;
+}
+.main-weather {
+  padding: 0;
+  text-align: left;
+}
+.weather-icon {
+  height: 60px;
+  width: 60px;
+}
+.temperature {
+  font-size: 40px;
+  line-height: 1;
+  position: relative;
+  bottom: -10px;
+}
+.units {
+  font-size: 14px;
+  position: relative;
+  top: -9px;
+}
+.others {
+  text-align: left;
+  padding: 0;
+  font-size: 12px;
+  color: gray;
+}
+.feel-units {
+  font-size: 9px;
+  position: relative;
+  top: -2px;
+}
+.forecast-temperature {
+  font-size: 12px;
+  text-align: center;
+}
+.forecast-icon {
+  width: 45px;
+  display: block;
+  margin: auto;
+}
+#search-text-input {
+  width: 200px;
+}
