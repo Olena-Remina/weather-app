@@ -6,7 +6,7 @@ function formatDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[date.getDay()];
   let hours = date.getHours();
@@ -133,7 +133,7 @@ function showForecast(response) {
 // Feature #5
 
 function retrievePosition(position) {
-  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiKey = "492ebb4183bc0de11aa650bd4178c621";
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
