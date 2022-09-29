@@ -12,12 +12,15 @@ h1 span {
   padding: 6px;
   border-radius: 7px;
 }
+.container{
+  max-width: 425px;
+}
 .card {
   text-align: center;
   margin: 20px auto;
   width: 400px;
 }
-.city-​​search {
+.city-search {
   text-align: left;
   margin: 0 0 10px;
 }
