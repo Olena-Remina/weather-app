@@ -41,7 +41,7 @@ h1 span {
   display: block;
   margin-bottom: 0;
 }
-.description {
+p:first-letter {
   text-transform: capitalize;
 }
 .main-weather {
