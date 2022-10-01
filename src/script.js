@@ -93,23 +93,18 @@ let realFeelCelsiusLink = document.querySelector("#real-feel-celsius-link");
 realFeelCelsiusLink.addEventListener("click", convertToRealCelsius);
 
 function displayTemperature(response) {
-  let cityElement = response.data.name;
-  let currentDescription = response.data.weather[0].description;
-  let currentTemperatureElement = Math.round(response.data.main.temp);
-  let currentFeelTemperatureElement = Math.round(response.data.main.feels_like);
-  let humidityElement = response.data.main.humidity;
-  let windElement = Math.round(response.data.wind.speed * 3.6);
   let city = document.querySelector("h2");
-  city.innerHTML = cityElement;
-  let description = document.querySelector("#description");
-  description.innerHTML = currentDescription;
   let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = currentTemperatureElement;
+  let description = document.querySelector("#description");
   let feelsLikeTemperature = document.querySelector("#real-feel-temperature");
-  feelsLikeTemperature.innerHTML = currentFeelTemperatureElement;
-  let currentHumidity = document.querySelector("#humidity");
-  currentHumidity.innerHTML = humidityElement;
+  let currentHumidity = document.querySelector("#humidity"); 
   let currentWind = document.querySelector("#wind");
+
+  city.innerHTML = response.data.name;
+  currentTemperature.innerHTML = Math.round(response.data.main.temp);;
+  description.innerHTML = response.data.weather[0].description;
+  feelsLikeTemperature.innerHTML = Math.round(response.data.main.feels_like);
+  currentHumidity.innerHTML = Math.round(response.data.wind.speed * 3.6);
   currentWind.innerHTML = windElement;
 }
 
