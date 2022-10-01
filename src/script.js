@@ -99,6 +99,7 @@ function displayTemperature(response) {
   let feelsLikeTemperature = document.querySelector("#real-feel-temperature");
   let currentHumidity = document.querySelector("#humidity"); 
   let currentWind = document.querySelector("#wind");
+  let currentDate=document.querySelector("#current-date");
 
   city.innerHTML = response.data.name;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);;
@@ -106,6 +107,7 @@ function displayTemperature(response) {
   feelsLikeTemperature.innerHTML = Math.round(response.data.main.feels_like);
   currentHumidity.innerHTML = Math.round(response.data.wind.speed * 3.6);
   currentWind.innerHTML = windElement;
+  currentDate.innerHTML=formatDate(response.data.dt*1000);
 }
 
 function search(city) {
