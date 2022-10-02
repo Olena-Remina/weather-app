@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+let date=new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -74,10 +75,6 @@ function convertToRealCelsius(event) {
   }
 }
 
-let currentDate = document.querySelector("#current-date");
-let now = new Date();
-currentDate.innerHTML = formatDate(now);
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
@@ -100,13 +97,13 @@ function displayTemperature(response) {
   let currentHumidity = document.querySelector("#humidity"); 
   let currentWind = document.querySelector("#wind");
   let currentDate=document.querySelector("#current-date");
-
+  
   city.innerHTML = response.data.name;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);;
   description.innerHTML = response.data.weather[0].description;
   feelsLikeTemperature.innerHTML = Math.round(response.data.main.feels_like);
-  currentHumidity.innerHTML = Math.round(response.data.wind.speed * 3.6);
-  currentWind.innerHTML = windElement;
+  currentHumidity.innerHTML = response.data.main.humidity;
+  currentWind.innerHTML = Math.round(response.data.wind.speed * 3.6);
   currentDate.innerHTML=formatDate(response.data.dt*1000);
 }
 
@@ -134,7 +131,6 @@ function getCurrentPosition() {
 
 let button = document.querySelector("#currentCity");
 button.addEventListener("click", getCurrentPosition);
-
 
 let form = document.querySelector("#city");
 form.addEventListener("submit", handleSubmit);
