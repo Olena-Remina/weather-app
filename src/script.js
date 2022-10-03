@@ -18,7 +18,7 @@ let date=new Date(timestamp);
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day} ${hours}:${minutes}`;
+  return `Last updated: ${day} ${hours}:${minutes}`;
 }
 
 function convertToFahrenheit(event) {
