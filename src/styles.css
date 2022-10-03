@@ -86,3 +86,7 @@ p:first-letter {
 #search-text-input {
   width: 200px;
 }
+footer{
+  text-align: center;
+  font-size: 12px;
+}
