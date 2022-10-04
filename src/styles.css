@@ -74,6 +74,18 @@ p:first-letter {
 .units a {
   text-decoration: none;
 }
+.others .active {
+  color: #212529;
+  cursor: default;
+  text-decoration: none;
+}
+.others .active:hover {
+  text-decoration: none;
+}
+.feel-units a {
+  text-decoration: none;
+}
+
 .others {
   text-align: left;
   padding: 0;

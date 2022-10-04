@@ -42,6 +42,7 @@ function displayTemperature(response) {
   currentIcon.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
+  realFeelCelsiusTemperature = response.data.main.feels_like;
 }
 
 function search(city) {
@@ -66,6 +67,23 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
+function displayRealFeelFahrenheitTemperature(event) {
+  event.preventDefault();
+  let realFeelTemperatureElement = document.querySelector("#real-feel-temperature");
+  realFeelCelsiusLink.classList.remove("active");
+  realFeelFahrenheitLink.classList.add("active");
+  let realFeelfahrenheitTemperature = (realFeelCelsiusTemperature * 9) / 5 + 32;
+  realFeelTemperatureElement.innerHTML = Math.round(realFeelfahrenheitTemperature);
+}
+
+function displayRealFeelCelsiusTemperature(event) {
+  event.preventDefault();
+  realFeelCelsiusLink.classList.add("active");
+  realFeelFahrenheitLink.classList.remove("active");
+  let realFeelTemperatureElement = document.querySelector("#real-feel-temperature");
+  realFeelTemperatureElement.innerHTML = Math.round(realFeelCelsiusTemperature);
+}
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -85,12 +103,19 @@ function displayCelsiusTemperature(event) {
 
 
 let celsiusTemperature = null;
+let realFeelCelsiusTemperature=null; 
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let realFeelFahrenheitLink = document.querySelector("#real-feel-fahrenheit-link");
+realFeelFahrenheitLink.addEventListener("click", displayRealFeelFahrenheitTemperature);
+
+let realFeelCelsiusLink = document.querySelector("#real-feel-celsius-link");
+realFeelCelsiusLink.addEventListener("click", displayRealFeelCelsiusTemperature);
 
 let button = document.querySelector("#currentCity");
 button.addEventListener("click", getCurrentPosition);
