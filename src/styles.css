@@ -63,6 +63,17 @@ p:first-letter {
   position: relative;
   top: -9px;
 }
+.main-weather .active {
+  color: #212529;
+  cursor: default;
+  text-decoration: none;
+}
+.main-weather .active:hover {
+  text-decoration: none;
+}
+.units a {
+  text-decoration: none;
+}
 .others {
   text-align: left;
   padding: 0;
