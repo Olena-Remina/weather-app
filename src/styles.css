@@ -97,15 +97,26 @@ p:first-letter {
   position: relative;
   top: -2px;
 }
-.forecast-temperature {
-  font-size: 12px;
-  text-align: center;
+
+.forecast-day {
+  font-size: 14px;
 }
+
 .forecast-icon {
   width: 45px;
   display: block;
   margin: auto;
 }
+
+.forecast-temperature {
+  font-size: 12px;
+  text-align: center;
+} 
+
+.forecast-temperature-min {
+  opacity: 0.6;
+}
+
 #search-text-input {
   width: 200px;
 }
