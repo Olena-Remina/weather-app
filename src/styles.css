@@ -75,7 +75,7 @@ p:first-letter {
   text-decoration: none;
 }
 .others .active {
-  color: #212529;
+  color: gray;
   cursor: default;
   text-decoration: none;
 }
@@ -112,4 +112,7 @@ p:first-letter {
 footer{
   text-align: center;
   font-size: 12px;
+}
+footer a {
+  text-decoration: none;
 }
