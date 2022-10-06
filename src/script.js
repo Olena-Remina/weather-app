@@ -21,6 +21,36 @@ let date=new Date(timestamp);
   return `Last updated: ${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col">
+            <div class="forecast-day">${day}</div>
+            <div class="forecast-icon">
+              <img src="images/sunny.gif" />
+            </div>
+            <div class="forecast-temperature">
+              <span class="forecast-temperature-max"> 18° </span>
+              <span class="forecast-temperature-min"> 12° </span>
+            </div>
+          </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
+          
+      
+
 function displayTemperature(response) {
   let city = document.querySelector("h2");
   let currentTemperature = document.querySelector("#temperature");
@@ -124,3 +154,4 @@ let form = document.querySelector("#city");
 form.addEventListener("submit", handleSubmit);
 
 search("Kyiv");
+displayForecast();
