@@ -2,13 +2,13 @@ body {
   font-family: sans-serif;
 }
 h1 {
-  color: #0988f0;
+  color: #007cb9;
   text-align: left;
   font-size: 25px;
   margin: 0;
 }
 h1 span {
-  background-color: #f4f88f;
+  background-color: #FF9966;;
   padding: 6px;
   border-radius: 7px;
 }
@@ -24,6 +24,32 @@ h1 span {
   text-align: left;
   margin: 0 0 10px;
 }
+.btn-outline-primary {
+  --bs-btn-color: #007cb9;
+  --bs-btn-border-color: #007cb9;
+  --bs-btn-hover-color: #ff895d;
+  --bs-btn-hover-bg: #007cb9;
+  --bs-btn-hover-border-color: #007cb9;
+  --bs-btn-active-color: #ff895d;
+  --bs-btn-active-bg: #007cb9;
+  --bs-btn-active-border-color: #007cb9;
+  --bs-btn-disabled-color: #007cb9;
+  --bs-btn-disabled-border-color: #007cb9;
+}
+
+.btn-outline-info {
+  --bs-btn-color: #ff895d;
+  --bs-btn-border-color: #ff895d;
+  --bs-btn-hover-color: #007cb9;
+  --bs-btn-hover-bg: #ff895d;
+  --bs-btn-hover-border-color: #ff895d;
+  --bs-btn-active-color: #007cb9;
+  --bs-btn-active-bg: #ff895d;
+  --bs-btn-active-border-color: #ff895d;
+  --bs-btn-disabled-color: #ff895d;
+  --bs-btn-disabled-border-color: #ff895d;
+} 
+
 .city {
   padding: 0;
 }
@@ -40,6 +66,10 @@ h1 span {
 .current-date {
   display: block;
   margin-bottom: 0;
+  font-size: 14px;
+}
+.description {
+  font-size: 14px;
 }
 p:first-letter {
   text-transform: capitalize;
@@ -73,6 +103,7 @@ p:first-letter {
 }
 .units a {
   text-decoration: none;
+  --bs-link-color: #007cb9;
 }
 .others .active {
   color: gray;
@@ -84,6 +115,7 @@ p:first-letter {
 }
 .feel-units a {
   text-decoration: none;
+  --bs-link-color: #007cb9;
 }
 
 .others {
@@ -126,4 +158,5 @@ footer{
 }
 footer a {
   text-decoration: none;
+  --bs-link-color: #007cb9;
 }
