@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  background-color: #f9f7fe;
 }
 h1 {
   color: #007cb9;
@@ -8,17 +9,20 @@ h1 {
   margin: 0;
 }
 h1 span {
-  background-color: #FF9966;;
+text-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
   padding: 6px;
   border-radius: 7px;
 }
 .container{
   max-width: 425px;
+  margin-top: 70px;
 }
 .card {
   text-align: center;
   margin: 20px auto;
   width: 400px;
+  background-color:#c3e0ec;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .city-search {
   text-align: left;
@@ -57,6 +61,7 @@ h1 span {
   text-align: left;
   padding: 0;
   font-size: 30px;
+  color:#ff895d;
 }
 .day-weather {
   font-size: 16px;
