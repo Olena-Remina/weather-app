@@ -1,9 +1,14 @@
+:root{
+  --background-card-color: #e6d7ff;
+  --primary-color:#007cb9;
+  --secondary-color:#ff895d;
+}
 body {
   font-family: sans-serif;
   background-color: #f9f7fe;
 }
 h1 {
-  color: #007cb9;
+  color: var(--primary-color);
   text-align: left;
   font-size: 25px;
   margin: 0;
@@ -21,7 +26,7 @@ text-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
   text-align: center;
   margin: 20px auto;
   width: 400px;
-  background-color:#d7e6f2;
+  background-color:var(--background-card-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .city-search {
@@ -29,29 +34,29 @@ text-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
   margin: 0 0 10px;
 }
 .btn-outline-primary {
-  --bs-btn-color: #007cb9;
-  --bs-btn-border-color: #007cb9;
-  --bs-btn-hover-color: #ff895d;
-  --bs-btn-hover-bg: #007cb9;
-  --bs-btn-hover-border-color: #007cb9;
-  --bs-btn-active-color: #ff895d;
-  --bs-btn-active-bg: #007cb9;
-  --bs-btn-active-border-color: #007cb9;
-  --bs-btn-disabled-color: #007cb9;
-  --bs-btn-disabled-border-color: #007cb9;
+  --bs-btn-color: var(--primary-color);
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-hover-color:var(--secondary-color);
+  --bs-btn-hover-bg: var(--primary-color);
+  --bs-btn-hover-border-color: var(--primary-color);
+  --bs-btn-active-color: var(--secondary-color);
+  --bs-btn-active-bg: var(--primary-color);
+  --bs-btn-active-border-color: var(--primary-color);
+  --bs-btn-disabled-color: var(--primary-color);
+  --bs-btn-disabled-border-color: var(--primary-color);
 }
 
 .btn-outline-info {
-  --bs-btn-color: #ff895d;
-  --bs-btn-border-color: #ff895d;
-  --bs-btn-hover-color: #007cb9;
-  --bs-btn-hover-bg: #ff895d;
-  --bs-btn-hover-border-color: #ff895d;
-  --bs-btn-active-color: #007cb9;
-  --bs-btn-active-bg: #ff895d;
-  --bs-btn-active-border-color: #ff895d;
-  --bs-btn-disabled-color: #ff895d;
-  --bs-btn-disabled-border-color: #ff895d;
+  --bs-btn-color: var(--secondary-color);
+  --bs-btn-border-color:var(--secondary-color);
+  --bs-btn-hover-color: var(--primary-color);
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--secondary-color);
+  --bs-btn-active-color: var(--primary-color);
+  --bs-btn-active-bg: var(--secondary-color);
+  --bs-btn-active-border-color: var(--secondary-color);
+  --bs-btn-disabled-color: var(--secondary-color);
+  --bs-btn-disabled-border-color: var(--secondary-color);
 } 
 
 .city {
@@ -61,7 +66,7 @@ text-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
   text-align: left;
   padding: 0;
   font-size: 30px;
-  color:#ff895d;
+  color:var(--secondary-color);
 }
 .day-weather {
   font-size: 16px;
